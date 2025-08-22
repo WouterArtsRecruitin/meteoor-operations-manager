@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operations Manager - Meteoor Precision Manufacturing v2.1</title>
+    <title>Operations Manager - Meteoor Precision Manufacturing v3.0</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -301,108 +301,68 @@
             border: none;
         }
         
-        .video-placeholder-professional {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-orange) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .video-cta-card {
+            background: white;
+            border-radius: 24px;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid rgba(26, 54, 93, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+        
+        .video-cta-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .video-icon {
+            font-size: 4rem;
+            margin-bottom: 24px;
+            display: block;
+        }
+        
+        .video-cta-card h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 24px;
+        }
+        
+        .video-cta-card p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+        
+        .video-request-btn {
+            background: var(--gradient-accent);
             color: white;
+            border: none;
+            padding: 18px 36px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            border-radius: 12px;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow: hidden;
-            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 16px;
         }
         
-        .video-placeholder-professional::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-            animation: float 15s ease-in-out infinite;
-        }
-        
-        .video-placeholder-professional:hover {
-            transform: scale(1.02);
+        .video-request-btn:hover {
+            transform: translateY(-2px);
             box-shadow: var(--shadow-xl);
         }
         
-        .video-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 500px;
-            padding: 0 20px;
-        }
-        
-        .play-button-large {
-            width: 100px;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px auto;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .video-placeholder-professional:hover .play-button-large {
-            background: rgba(255, 255, 255, 0.25);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: scale(1.1);
-        }
-        
-        .play-icon-large {
-            width: 0;
-            height: 0;
-            border-left: 24px solid white;
-            border-top: 14px solid transparent;
-            border-bottom: 14px solid transparent;
-            margin-left: 8px;
-        }
-        
-        .video-cta-button {
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid rgba(255, 255, 255, 0.4);
-            padding: 12px 24px;
-            border-radius: 30px;
-            margin: 20px auto;
-            display: inline-block;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .video-placeholder-professional:hover .video-cta-button {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.6);
-            transform: translateY(-2px);
-        }
-        
-        .video-decoration {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            animation: pulse 3s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.3; }
-            50% { transform: scale(1.1); opacity: 0.6; }
+        .video-note {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin: 0;
         }
         
         /* Stats Section */
@@ -943,40 +903,30 @@
         </div>
     </section>
 
-    <!-- Video Section -->
+    <!-- Video Section - Simplified -->
     <section class="video-section" id="video">
         <div class="container">
             <div class="video-container">
-                <h2 class="video-title">Ontdek Meteoor van Binnen</h2>
+                <h2 class="video-title">Bedrijfsvideo beschikbaar op aanvraag</h2>
                 <p class="video-subtitle">
-                    Krijg een kijkje achter de schermen bij onze precision manufacturing operaties 
+                    Krijg een exclusieve kijkje achter de schermen bij onze precision manufacturing operaties 
                     en hoor van onze mensen wat het betekent om bij Meteoor te werken.
                 </p>
                 
-                <!-- Professional Video Placeholder -->
-                <div class="video-wrapper" id="videoContainer">
-                    <div class="video-placeholder-professional" onclick="handleVideoRequest()">
-                        <div class="video-content">
-                            <div class="play-button-large">
-                                <div class="play-icon-large"></div>
-                            </div>
-                            <h3 style="font-size: 1.5rem; font-weight: 700; margin: 20px 0 8px 0; color: white;">
-                                Een kijkje achter de schermen
-                            </h3>
-                            <p style="font-size: 1.1rem; opacity: 0.9; line-height: 1.5; max-width: 400px; color: white;">
-                                Ontdek hoe onze precision manufacturing operaties Nederland vormgeven
-                            </p>
-                            <div class="video-cta-button">
-                                <span>▶ Video aanvragen</span>
-                            </div>
-                            <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 16px; color: white;">
-                                We sturen je graag onze bedrijfsvideo toe
-                            </p>
-                        </div>
-                        
-                        <!-- Decorative elements -->
-                        <div class="video-decoration"></div>
-                    </div>
+                <!-- Simple CTA Card -->
+                <div class="video-cta-card">
+                    <div class="video-icon">🎥</div>
+                    <h3>Bekijk onze bedrijfsvideo</h3>
+                    <p>
+                        • Precision manufacturing processen<br>
+                        • Interviews met huidige Operations Managers<br>
+                        • Tour door onze faciliteiten<br>
+                        • Team en bedrijfscultuur
+                    </p>
+                    <button class="video-request-btn" onclick="requestVideo()">
+                        📧 Video Aanvragen
+                    </button>
+                    <p class="video-note">We sturen de video binnen 2 uur naar je email</p>
                 </div>
             </div>
         </div>
@@ -1258,34 +1208,26 @@
             observer.observe(el);
         });
 
-        // Video Request Handler
-        function handleVideoRequest() {
-            const confirmed = confirm(
-                '🎥 Bedrijfsvideo aanvragen\n\n' +
-                'We sturen je graag onze exclusieve bedrijfsvideo toe waarin je:\n\n' +
-                '• Een kijkje achter de schermen krijgt\n' +
-                '• Huidige Operations Managers hoort\n' +
-                '• Onze precision manufacturing ziet\n' +
-                '• Het team en de faciliteiten ontdekt\n\n' +
-                'Wil je de video ontvangen?'
+        // Simple Video Request Handler
+        function requestVideo() {
+            alert(
+                '🎥 Bedrijfsvideo aangevraagd!\n\n' +
+                'We sturen je binnen 2 uur onze exclusieve video toe met:\n\n' +
+                '• Precision manufacturing processen\n' +
+                '• Interviews met Operations Managers\n' +
+                '• Tour door faciliteiten\n' +
+                '• Team en bedrijfscultuur\n\n' +
+                '📧 Email: meteoor@recruitin.nl\n' +
+                '📞 Vragen: +31 (0)6 1234 5678\n\n' +
+                'Check je inbox binnen 2 uur!'
             );
             
-            if (confirmed) {
-                // Track video request
-                console.log('Video requested:', {
-                    timestamp: new Date().toISOString(),
-                    action: 'video_request',
-                    source: 'meteoor-operations-video'
-                });
-                
-                alert(
-                    '✅ Video aanvraag verzonden!\n\n' +
-                    'We sturen je binnen 2 uur onze bedrijfsvideo toe.\n\n' +
-                    'Check je email (inclusief spam) voor:\n' +
-                    '📧 meteoor@recruitin.nl\n\n' +
-                    'Vragen? Bel direct: +31 (0)6 1234 5678'
-                );
-            }
+            // Track video request
+            console.log('Video requested:', {
+                timestamp: new Date().toISOString(),
+                action: 'simple_video_request',
+                source: 'meteoor-operations-card'
+            });
         }
 
         // LinkedIn Application Handler
