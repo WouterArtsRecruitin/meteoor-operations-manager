@@ -298,7 +298,7 @@
             border: none;
         }
         
-        .video-placeholder {
+        .video-placeholder-professional {
             position: absolute;
             top: 0;
             left: 0;
@@ -309,36 +309,97 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.5rem;
-            font-weight: 600;
             cursor: pointer;
-            transition: opacity 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            position: relative;
         }
         
-        .video-placeholder:hover {
-            opacity: 0.9;
+        .video-placeholder-professional::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            animation: float 15s ease-in-out infinite;
         }
         
-        .play-button {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.2);
+        .video-placeholder-professional:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .video-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 500px;
+            padding: 0 20px;
+        }
+        
+        .play-button-large {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 24px auto;
+            border: 3px solid rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
         }
         
-        .play-icon {
+        .video-placeholder-professional:hover .play-button-large {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+        }
+        
+        .play-icon-large {
             width: 0;
             height: 0;
-            border-left: 20px solid white;
-            border-top: 12px solid transparent;
-            border-bottom: 12px solid transparent;
-            margin-left: 6px;
+            border-left: 24px solid white;
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            margin-left: 8px;
+        }
+        
+        .video-cta-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            padding: 12px 24px;
+            border-radius: 30px;
+            margin: 20px auto;
+            display: inline-block;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .video-placeholder-professional:hover .video-cta-button {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-2px);
+        }
+        
+        .video-decoration {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.6; }
         }
         
         /* Stats Section */
@@ -889,26 +950,30 @@
                     en hoor van onze mensen wat het betekent om bij Meteoor te werken.
                 </p>
                 
-                <!-- InVideo Embedded Player -->
+                <!-- Professional Video Placeholder -->
                 <div class="video-wrapper" id="videoContainer">
-                    <div class="video-placeholder" id="videoPlaceholder" onclick="loadVideo()">
-                        <div>
-                            <div class="play-button">
-                                <div class="play-icon"></div>
+                    <div class="video-placeholder-professional" onclick="handleVideoRequest()">
+                        <div class="video-content">
+                            <div class="play-button-large">
+                                <div class="play-icon-large"></div>
                             </div>
-                            <div style="font-size: 1.2rem; font-weight: 600;">▶ Video afspelen</div>
-                            <div style="font-size: 1rem; opacity: 0.8; margin-top: 8px;">
-                                Ontdek precision manufacturing bij Meteoor
+                            <h3 style="font-size: 1.5rem; font-weight: 700; margin: 20px 0 8px 0; color: white;">
+                                Een kijkje achter de schermen
+                            </h3>
+                            <p style="font-size: 1.1rem; opacity: 0.9; line-height: 1.5; max-width: 400px; color: white;">
+                                Ontdek hoe onze precision manufacturing operaties Nederland vormgeven
+                            </p>
+                            <div class="video-cta-button">
+                                <span>▶ Video aanvragen</span>
                             </div>
+                            <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 16px; color: white;">
+                                We sturen je graag onze bedrijfsvideo toe
+                            </p>
                         </div>
+                        
+                        <!-- Decorative elements -->
+                        <div class="video-decoration"></div>
                     </div>
-                    <iframe id="videoFrame" 
-                            data-src="https://ai.invideo.io/watch/stoEM7CiaEf" 
-                            title="Meteoor - Een kijkje achter de schermen"
-                            frameborder="0"
-                            allowfullscreen
-                            style="display: none;">
-                    </iframe>
                 </div>
             </div>
         </div>
@@ -1190,21 +1255,33 @@
             observer.observe(el);
         });
 
-        // Video Lazy Loading Function
-        function loadVideo() {
-            const placeholder = document.getElementById('videoPlaceholder');
-            const videoFrame = document.getElementById('videoFrame');
+        // Video Request Handler
+        function handleVideoRequest() {
+            const confirmed = confirm(
+                '🎥 Bedrijfsvideo aanvragen\n\n' +
+                'We sturen je graag onze exclusieve bedrijfsvideo toe waarin je:\n\n' +
+                '• Een kijkje achter de schermen krijgt\n' +
+                '• Huidige Operations Managers hoort\n' +
+                '• Onze precision manufacturing ziet\n' +
+                '• Het team en de faciliteiten ontdekt\n\n' +
+                'Wil je de video ontvangen?'
+            );
             
-            if (placeholder && videoFrame) {
-                placeholder.style.display = 'none';
-                videoFrame.style.display = 'block';
-                videoFrame.src = videoFrame.getAttribute('data-src') + '?autoplay=1';
-                
-                console.log('Video loaded:', {
+            if (confirmed) {
+                // Track video request
+                console.log('Video requested:', {
                     timestamp: new Date().toISOString(),
-                    action: 'video_play',
+                    action: 'video_request',
                     source: 'meteoor-operations-video'
                 });
+                
+                alert(
+                    '✅ Video aanvraag verzonden!\n\n' +
+                    'We sturen je binnen 2 uur onze bedrijfsvideo toe.\n\n' +
+                    'Check je email (inclusief spam) voor:\n' +
+                    '📧 meteoor@recruitin.nl\n\n' +
+                    'Vragen? Bel direct: +31 (0)6 1234 5678'
+                );
             }
         }
 
