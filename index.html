@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operations Manager - Meteoor Precision Manufacturing</title>
+    <link rel="preconnect" href="https://ai.invideo.io">
+    <link rel="dns-prefetch" href="https://ai.invideo.io">
+    <meta name="description" content="Operations Manager bij Meteoor Precision Manufacturing. Leid precision manufacturing operaties die de Nederlandse infrastructuur vormgeven.">
+    <meta name="keywords" content="Operations Manager, Meteoor, BTE Nederland, precision manufacturing, vacature">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         
@@ -197,6 +201,55 @@
             border-color: rgba(255, 255, 255, 0.5);
         }
         
+        /* Story Section */
+        .story-section {
+            background: white;
+            padding: 100px 0;
+        }
+        
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .story-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+            letter-spacing: -0.02em;
+        }
+        
+        .story-text {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        
+        .story-highlight {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 16px;
+            border-left: 4px solid var(--accent-orange);
+            text-align: left;
+            margin-top: 40px;
+        }
+        
+        .story-highlight h3 {
+            color: var(--primary-blue);
+            font-size: 1.375rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .story-highlight p {
+            color: var(--text-secondary);
+            font-size: 1.0625rem;
+            line-height: 1.7;
+        }
+        
         /* Video Section */
         .video-section {
             background: var(--bg-light);
@@ -288,11 +341,287 @@
             margin-left: 6px;
         }
         
+        /* Stats Section */
+        .stats-section {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(26, 54, 93, 0.1);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        /* Challenge Section */
+        .challenge-section {
+            background: var(--bg-light);
+            padding: 120px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .challenge-grid-bottom {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .challenge-card {
+            background: white;
+            padding: 48px 40px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(26, 54, 93, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .challenge-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .challenge-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .challenge-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .challenge-title {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+        
+        .challenge-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 1.0625rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            background: white;
+            padding: 120px 0;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .testimonial-card {
+            background: var(--bg-light);
+            padding: 48px 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(26, 54, 93, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            font-size: 4rem;
+            color: var(--accent-orange);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent-orange);
+        }
+        
+        .testimonial-quote {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--text-primary);
+            font-style: italic;
+            margin-bottom: 32px;
+            padding-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-name {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 4px;
+        }
+        
+        .author-role {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* What We Offer Section */
+        .offer-section {
+            background: var(--bg-light);
+            padding: 120px 0;
+        }
+        
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .offer-card {
+            background: white;
+            padding: 48px 40px;
+            border-radius: 24px;
+            border: 2px solid transparent;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .offer-card:hover {
+            border-color: var(--accent-orange);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .offer-title {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 24px;
+        }
+        
+        .offer-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        .offer-check {
+            width: 20px;
+            height: 20px;
+            background: var(--success-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .salary-highlight {
+            background: var(--gradient-accent);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+        
         /* CTA Section */
         .cta-section {
             background: white;
             padding: 100px 0;
+        }
+        
+        .cta-container {
             text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .cta-title {
@@ -307,9 +636,6 @@
             color: var(--text-secondary);
             margin-bottom: 50px;
             line-height: 1.6;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
         
         .cta-buttons {
@@ -365,6 +691,25 @@
             box-shadow: var(--shadow-lg);
         }
         
+        .recruiter-info {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .recruiter-text {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            margin-bottom: 8px;
+        }
+        
+        .recruiter-contact {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+        
         /* Footer */
         .footer {
             background: #1a202c;
@@ -405,7 +750,27 @@
             50% { transform: translateY(-20px); }
         }
         
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .challenge-grid,
+            .challenge-grid-bottom,
+            .offer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
         @media (max-width: 768px) {
             .nav-info {
                 display: none;
@@ -427,9 +792,29 @@
                 justify-content: center;
             }
             
+            .challenge-grid,
+            .challenge-grid-bottom,
+            .offer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -463,7 +848,32 @@
                         Meer informatie
                         <span>→</span>
                     </a>
-                    <a href="#video" class="btn-secondary">Bekijk video</a>
+                    <a href="#verhaal" class="btn-secondary">Het verhaal</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section" id="verhaal">
+        <div class="container">
+            <div class="story-content">
+                <h2 class="story-title">Meer dan een eeuw precisie</h2>
+                <p class="story-text">
+                    Sinds 1907 staat Meteoor voor precisie en betrouwbaarheid in betonproductie. 
+                    Als onderdeel van BTE Nederland combineren we traditioneel vakmanschap met 
+                    geavanceerde manufacturing technologie. Onze producten vormen letterlijk de 
+                    ruggengraat van de Nederlandse infrastructuur.
+                </p>
+                
+                <div class="story-highlight">
+                    <h3>De Operations Manager uitdaging</h3>
+                    <p>
+                        Je krijgt de leiding over complexe productieprocessen waar automotive-niveau precisie 
+                        de standaard is. Met een team van 100+ professionals en een productie volume van €40M+ 
+                        per jaar, vorm je niet alleen producten — je ontwikkelt mensen en processen die 
+                        generaties meegaan.
+                    </p>
                 </div>
             </div>
         </div>
@@ -504,6 +914,220 @@
         </div>
     </section>
 
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Teamleden onder jouw leiding</div>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-number">€40M</div>
+                    <div class="stat-label">Jaarlijks productie volume</div>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-number">115+</div>
+                    <div class="stat-label">Jaar bedrijfsgeschiedenis</div>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Geavanceerde productie facilities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="challenge-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Jouw operationele uitdagingen</h2>
+                <p class="section-subtitle">
+                    Als Operations Manager bij Meteoor stuur je processen aan die precisie, efficiency en kwaliteit combineren
+                </p>
+            </div>
+            
+            <div class="challenge-grid">
+                <div class="challenge-card animate-on-scroll">
+                    <h3 class="challenge-title">Precision Manufacturing Leadership</h3>
+                    <p class="challenge-description">
+                        Carrouselsystemen met micrometer-toleranties. Quality control die automotive-standards overtreft. 
+                        Je zorgt dat elke component voldoet aan de hoogste eisen.
+                    </p>
+                </div>
+                <div class="challenge-card animate-on-scroll">
+                    <h3 class="challenge-title">Infrastructuur Impact</h3>
+                    <p class="challenge-description">
+                        Jouw producten zijn overal zichtbaar: NS stations, snelwegen, industrieterreinen. 
+                        Miljoenen Nederlanders gebruiken dagelijks infrastructuur met jouw vakmanschap.
+                    </p>
+                </div>
+                <div class="challenge-card animate-on-scroll">
+                    <h3 class="challenge-title">Technische Innovatie</h3>
+                    <p class="challenge-description">
+                        ASCEM samenwerking voor next-generation producten. Continuous improvement cultuur. 
+                        Investering in geavanceerde productie technologie.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="challenge-grid-bottom">
+                <div class="challenge-card animate-on-scroll">
+                    <h3 class="challenge-title">Team Development</h3>
+                    <p class="challenge-description">
+                        Ontwikkel en inspireer 4 operations managers die elk hun eigen teams aansturen. 
+                        Bouw aan een cultuur van excellence en vakmanschap.
+                    </p>
+                </div>
+                <div class="challenge-card animate-on-scroll">
+                    <h3 class="challenge-title">Multi-site Operaties</h3>
+                    <p class="challenge-description">
+                        Coördineer productie tussen Meteoor en ASCEM facilities. Optimaliseer workflows, 
+                        capaciteit en resource allocation over meerdere locaties.
+                    </p>
+                </div>
+                <div class="challenge-card animate-on-scroll">
+                    <h3 class="challenge-title">Operational Excellence</h3>
+                    <p class="challenge-description">
+                        Implementeer Lean Six Sigma principes. Stuur KPI's aan rond efficiency, kwaliteit, 
+                        veiligheid en leverbetrouwbaarheid in een €40M+ operatie.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Wat onze mensen zeggen</h2>
+                <p class="section-subtitle">
+                    Echte verhalen van collega's die bij Meteoor en BTE Nederland hun carrière hebben opgebouwd
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-quote">
+                        "Het leukst aan werken bij dit bedrijf is dat je je verder kunt specialiseren, maar je kunt ook 'gewoon' je werk doen; er is voor ieder wat wils. Wanneer je hier een goede werkmentaliteit hebt, kan je alle kanten op."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Roy van der Mijn</div>
+                            <div class="author-role">Teamleider • Van uitzendkracht naar teamleider in 18 maanden</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-quote">
+                        "Er werken hier veel medewerkers die elkaar al decennialang kennen. Ze komen hier allemaal uit de omgeving en hebben al veel samen meegemaakt. Ze kennen elkaar door en door en daarmee creëer je echt een familiegevoel."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Roy van der Mijn</div>
+                            <div class="author-role">Teamleider • Over de cultuur bij Meteoor</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-quote">
+                        "Bij de BTE Groep heb ik het gevoel dat je gehoord wordt, je kunt verbetervoorstellen inbrengen en er wordt dan samen gekeken hoe we daarin een weg kunnen vinden. Het is nergens hetzelfde werken als bij de BTE Groep."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Roy van der Mijn</div>
+                            <div class="author-role">Teamleider • Over ontwikkelmogelijkheden</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section class="offer-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Wat wij bieden</h2>
+                <p class="section-subtitle">
+                    Een compleet pakket voor ervaren operations professionals die impact willen maken
+                </p>
+            </div>
+            <div class="offer-grid">
+                <div class="offer-card animate-on-scroll">
+                    <h3 class="offer-title">Aantrekkelijk Pakket</h3>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span><span class="salary-highlight">€62.000 - €75.000</span> bruto per jaar</span>
+                    </div>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>Performance-gerelateerde bonus</span>
+                    </div>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>Uitgebreide pensioenregeling</span>
+                    </div>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>Reiskostenvergoeding €0,21/km</span>
+                    </div>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>Lease-auto mogelijkheid</span>
+                    </div>
+                </div>
+                <div class="offer-card animate-on-scroll">
+                    <h3 class="offer-title">Ontwikkeling & Groei</h3>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>BTE Academy training programma's</span>
+                    </div>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>Lean Six Sigma Black Belt certificering</span>
+                    </div>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>Doorgroeipad naar Regional Operations Director</span>
+                    </div>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>Internationale branche conferenties</span>
+                    </div>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>Leadership development programma</span>
+                    </div>
+                </div>
+                <div class="offer-card animate-on-scroll">
+                    <h3 class="offer-title">Work-Life Balans</h3>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>Hybride werken (4 dagen on-site)</span>
+                    </div>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>Flexibele werktijden binnen core hours</span>
+                    </div>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>€8.000 relocatie ondersteuning</span>
+                    </div>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>Uitgebreide zorgverzekering</span>
+                    </div>
+                    <div class="offer-item">
+                        <div class="offer-check">✓</div>
+                        <span>25 vakantiedagen + 13 ADV</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section" id="interesse">
         <div class="container">
@@ -525,6 +1149,14 @@
                         ☕ Kop koffie & rondleiding
                     </a>
                 </div>
+                
+                <div class="recruiter-info">
+                    <p class="recruiter-text">Vragen over deze functie? Neem direct contact op met onze recruitment partner.</p>
+                    <p class="recruiter-contact">Recruitin | +31 (0)6 1234 5678 | meteoor@recruitin.nl</p>
+                    <p class="recruiter-text" style="font-size: 0.875rem; margin-top: 12px; font-style: italic;">
+                        Joep van Meteoor is druk met operationele zaken — alle sollicitaties worden professioneel behandeld door Recruitin.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -539,6 +1171,25 @@
     </footer>
 
     <script>
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animate-on-scroll elements
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
         // Video Lazy Loading Function
         function loadVideo() {
             const placeholder = document.getElementById('videoPlaceholder');
