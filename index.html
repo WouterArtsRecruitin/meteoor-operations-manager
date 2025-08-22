@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operations Manager - Meteoor Precision Manufacturing v3.0</title>
+    <title>Operations Manager - Meteoor Precision Manufacturing v4.0</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -301,68 +301,15 @@
             border: none;
         }
         
-        .video-cta-card {
-            background: white;
-            border-radius: 24px;
-            padding: 60px 40px;
+        .video-caption {
             text-align: center;
-            box-shadow: var(--shadow-xl);
-            border: 1px solid rgba(26, 54, 93, 0.1);
+            margin-top: 24px;
+            font-size: 1.0625rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
             max-width: 600px;
-            margin: 0 auto;
-            transition: all 0.3s ease;
-        }
-        
-        .video-cta-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        .video-icon {
-            font-size: 4rem;
-            margin-bottom: 24px;
-            display: block;
-        }
-        
-        .video-cta-card h3 {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary-blue);
-            margin-bottom: 24px;
-        }
-        
-        .video-cta-card p {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 32px;
-            text-align: left;
-        }
-        
-        .video-request-btn {
-            background: var(--gradient-accent);
-            color: white;
-            border: none;
-            padding: 18px 36px;
-            font-size: 1.25rem;
-            font-weight: 700;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-lg);
-            margin-bottom: 16px;
-        }
-        
-        .video-request-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .video-note {
-            font-size: 0.9375rem;
-            color: var(--text-secondary);
-            font-style: italic;
-            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         /* Stats Section */
@@ -903,31 +850,28 @@
         </div>
     </section>
 
-    <!-- Video Section - Simplified -->
+    <!-- Video Section - Direct Playback -->
     <section class="video-section" id="video">
         <div class="container">
             <div class="video-container">
-                <h2 class="video-title">Bedrijfsvideo beschikbaar op aanvraag</h2>
+                <h2 class="video-title">Ontdek Meteoor van Binnen</h2>
                 <p class="video-subtitle">
-                    Krijg een exclusieve kijkje achter de schermen bij onze precision manufacturing operaties 
+                    Krijg een kijkje achter de schermen bij onze precision manufacturing operaties 
                     en hoor van onze mensen wat het betekent om bij Meteoor te werken.
                 </p>
                 
-                <!-- Simple CTA Card -->
-                <div class="video-cta-card">
-                    <div class="video-icon">🎥</div>
-                    <h3>Bekijk onze bedrijfsvideo</h3>
-                    <p>
-                        • Precision manufacturing processen<br>
-                        • Interviews met huidige Operations Managers<br>
-                        • Tour door onze faciliteiten<br>
-                        • Team en bedrijfscultuur
-                    </p>
-                    <button class="video-request-btn" onclick="requestVideo()">
-                        📧 Video Aanvragen
-                    </button>
-                    <p class="video-note">We sturen de video binnen 2 uur naar je email</p>
+                <!-- YouTube Video Embed -->
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&showinfo=0&modestbranding=1" 
+                            title="Meteoor Precision Manufacturing - Achter de Schermen" 
+                            frameborder="0" 
+                            allowfullscreen>
+                    </iframe>
                 </div>
+                
+                <p class="video-caption">
+                    <strong>Een kijkje bij Meteoor:</strong> Precision manufacturing processen, interviews met Operations Managers, en een tour door onze faciliteiten.
+                </p>
             </div>
         </div>
     </section>
@@ -1208,27 +1152,6 @@
             observer.observe(el);
         });
 
-        // Simple Video Request Handler
-        function requestVideo() {
-            alert(
-                '🎥 Bedrijfsvideo aangevraagd!\n\n' +
-                'We sturen je binnen 2 uur onze exclusieve video toe met:\n\n' +
-                '• Precision manufacturing processen\n' +
-                '• Interviews met Operations Managers\n' +
-                '• Tour door faciliteiten\n' +
-                '• Team en bedrijfscultuur\n\n' +
-                '📧 Email: meteoor@recruitin.nl\n' +
-                '📞 Vragen: +31 (0)6 1234 5678\n\n' +
-                'Check je inbox binnen 2 uur!'
-            );
-            
-            // Track video request
-            console.log('Video requested:', {
-                timestamp: new Date().toISOString(),
-                action: 'simple_video_request',
-                source: 'meteoor-operations-card'
-            });
-        }
 
         // LinkedIn Application Handler
         function handleLinkedInApply() {
